@@ -34,5 +34,14 @@ export const navs = [
     size: 50,
     color: "#fdbded",
     route: 'Day4'
+  },
+  {
+    key: 4,
+    title: "tinder",
+    isFA: true,
+    icon: "fire",
+    size: 50,
+    color: "#ff6b6b",
+    route: 'Day5'
   }
 ];

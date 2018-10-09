@@ -4,6 +4,7 @@ import { StyleSheet, LayoutAnimation, Text, PanResponder, View } from 'react-nat
 import Util from './utils';
 import { navs } from './constant';
 import Icon from 'react-native-vector-icons/Ionicons';
+import IconFA from 'react-native-vector-icons/FontAwesome';
 
 class Sortable extends Component {
   constructor() {
@@ -154,7 +155,8 @@ class Sortable extends Component {
         <View ref={"box" + index} {...this._panResponder.panHandlers} key={elem.key} style={[styles.touchBox, { top, left }]}>
           <View style={styles.boxContainer}>
             <Text style={styles.boxText}>Day{index + 1}</Text>
-            <Icon size={elem.size} name={elem.icon} style={[styles.boxIcon, { color: elem.color }]}></Icon>
+            {elem.isFA ? <IconFA size={elem.size} name={elem.icon} style={[styles.boxIcon, { color: elem.color }]}></IconFA> :
+              <Icon size={elem.size} name={elem.icon} style={[styles.boxIcon, { color: elem.color }]}></Icon>}
           </View>
         </View>
       );

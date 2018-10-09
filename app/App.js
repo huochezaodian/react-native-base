@@ -11,6 +11,7 @@ import Day1 from './day1';
 import Day2 from './day2';
 import Day3 from './day3';
 import Day4 from './day4';
+import Day5 from './day5';
 
 class MainView extends Component {
   constructor() {
@@ -52,7 +53,7 @@ export default createStackNavigator({
   Home: {
     screen: MainView,
     navigationOptions: {
-      title: '4 days of rn'
+      title: `${navs.length} days of rn`
     }
   },
   Day1: {
@@ -77,6 +78,12 @@ export default createStackNavigator({
     screen: Day4,
     navigationOptions: {
       header: null
+    }
+  },
+  Day5: {
+    screen: Day5,
+    navigationOptions: {
+      title: 'tinder'
     }
   }
 });
